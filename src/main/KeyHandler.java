@@ -9,42 +9,43 @@ public class KeyHandler implements KeyListener {
 
     @Override
     public void keyTyped(KeyEvent e) {
-
+        // Wird nicht verwendet
     }
 
     @Override
     public void keyPressed(KeyEvent e) {
-        int code = e.getKeyCode();
+        int code = e.getKeyCode(); // Abfrage des gedrückten Keys
 
-        if(code == KeyEvent.VK_W) {
+        // Setzen der Bewegungsflags basierend auf dem gedrückten Key
+        if (code == KeyEvent.VK_W) {
             upPressed = true;
         }
-        if(code == KeyEvent.VK_S) {
+        if (code == KeyEvent.VK_S) {
             downPressed = true;
         }
-        if(code == KeyEvent.VK_A) {
+        if (code == KeyEvent.VK_A) {
             leftPressed = true;
         }
-        if(code == KeyEvent.VK_D) {
+        if (code == KeyEvent.VK_D) {
             rightPressed = true;
         }
-
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
-        int code = e.getKeyCode();
+        int code = e.getKeyCode(); // Abfrage des losgelassenen Keys
 
-        if(code == KeyEvent.VK_W) {
+        // Zurücksetzen der Bewegungsflags basierend auf dem losgelassenen Key
+        if (code == KeyEvent.VK_W) {
             upPressed = false;
         }
-        if(code == KeyEvent.VK_S) {
+        if (code == KeyEvent.VK_S) {
             downPressed = false;
         }
-        if(code == KeyEvent.VK_A) {
+        if (code == KeyEvent.VK_A) {
             leftPressed = false;
         }
-        if(code == KeyEvent.VK_D) {
+        if (code == KeyEvent.VK_D) {
             rightPressed = false;
         }
     }
